@@ -1,0 +1,516 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DraySOAR - Giải Pháp Tự Động Hóa & Điều Phối An Ninh Mạng | DrayTek</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            blue: '#00529B',
+                            red: '#E31E24',
+                            dark: '#0F172A',
+                            accent: '#2563EB',
+                            light: '#F8FAFC'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'system-ui', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        .gradient-text {
+            background: linear-gradient(135deg, #2563EB 0%, #E31E24 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .hero-bg {
+            background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at bottom left, rgba(227, 30, 36, 0.05) 0%, transparent 50%),
+                        #0F172A;
+        }
+    </style>
+</head>
+<body class="bg-slate-50 text-slate-800 font-sans antialiased">
+
+    <!-- Navigation -->
+    <nav class="sticky top-0 z-50 bg-slate-900/95 backdrop-blur border-b border-slate-800 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-20 flex items-center justify-between">
+            <div class="flex items-center space-x-3">
+                <span class="text-2xl font-extrabold tracking-wider text-red-600">DrayTek</span>
+                <span class="text-xs px-2 py-1 bg-blue-900/80 text-blue-300 font-semibold rounded border border-blue-700">SOAR</span>
+            </div>
+            <div class="hidden md:flex items-center space-x-8 text-sm font-medium">
+                <a href="#overview" class="hover:text-blue-400 transition-colors">Tổng Quan</a>
+                <a href="#workflow" class="hover:text-blue-400 transition-colors">Quy Trình An Ninh</a>
+                <a href="#intelligence" class="hover:text-blue-400 transition-colors">Tích Hợp An Ninh</a>
+                <a href="#playbooks" class="hover:text-blue-400 transition-colors">Playbooks</a>
+                <a href="#management" class="hover:text-blue-400 transition-colors">Quản Lý Tập Trung</a>
+            </div>
+            <div>
+                <a href="#contact" class="bg-red-600 hover:bg-red-700 text-white font-semibold px-5 py-2.5 rounded-lg shadow-lg shadow-red-600/30 transition-all text-sm inline-block">
+                    Tư Vấn Ngay
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="overview" class="hero-bg text-white py-20 lg:py-32 relative overflow-hidden">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-7 space-y-6">
+                    <div class="inline-flex items-center space-x-2 bg-blue-950/80 border border-blue-700/50 px-3 py-1.5 rounded-full text-xs text-blue-300 font-medium">
+                        <span class="w-2 h-2 rounded-full bg-blue-400 animate-pulse"></span>
+                        <span>Security Orchestration, Automation, and Response</span>
+                    </div>
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-tight">
+                        DraySOAR <br>
+                        <span class="gradient-text">Điều Phối & Tự Động Hóa An Ninh Mạng</span>
+                    </h1>
+                    <p class="text-lg text-slate-300 leading-relaxed">
+                        Kết hợp khả năng giám sát thiết bị, phân tích lỗ hổng bảo mật với dữ liệu an ninh mạng và thiết bị đầu cuối (endpoint). DraySOAR mang lại ngữ cảnh rõ ràng cho các rủi ro an ninh, giúp doanh nghiệp chủ động phát hiện và xử lý mối đe dọa.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a href="#contact" class="bg-red-600 hover:bg-red-700 text-white font-bold px-8 py-4 rounded-xl shadow-xl shadow-red-600/20 text-center transition-all">
+                            Yêu Cầu Demo Giải Pháp
+                        </a>
+                        <a href="#workflow" class="border border-slate-700 hover:bg-slate-800 text-slate-200 font-semibold px-8 py-4 rounded-xl text-center transition-all">
+                            Khám Phá Tính Năng
+                        </a>
+                    </div>
+                </div>
+                <div class="lg:col-span-5">
+                    <div class="bg-slate-800/80 border border-slate-700 rounded-2xl p-6 shadow-2xl backdrop-blur relative">
+                        <div class="flex items-center space-x-2 border-b border-slate-700 pb-4 mb-4">
+                            <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                            <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                            <span class="text-xs text-slate-400 ml-2 font-mono">DraySOAR Control Center</span>
+                        </div>
+                        <div class="space-y-4">
+                            <div class="bg-slate-900/90 p-4 rounded-lg border border-slate-700/50">
+                                <div class="flex justify-between text-xs text-slate-400 mb-1">
+                                    <span>Cảnh Báo An Ninh Tự Động</span>
+                                    <span class="text-red-400 font-bold">Cao</span>
+                                </div>
+                                <p class="text-sm font-semibold text-slate-200">Phát hiện truy cập IP nguy hiểm qua Suricata</p>
+                                <p class="text-xs text-slate-400 mt-1">Đã kích hoạt Playbook: Cách ly Endpoint & Chặn IP Gateway</p>
+                            </div>
+                            <div class="bg-slate-900/90 p-4 rounded-lg border border-slate-700/50">
+                                <div class="flex justify-between text-xs text-slate-400 mb-1">
+                                    <span>DrayEDR Endpoint</span>
+                                    <span class="text-green-400 font-bold">Đã xử lý</span>
+                                </div>
+                                <p class="text-sm font-semibold text-slate-200">Phát hiện Ransomware trên Host Windows</p>
+                                <p class="text-xs text-slate-400 mt-1">Hành động: Tự động khóa tiến trình nghi vấn</p>
+                            </div>
+                            <div class="grid grid-cols-3 gap-2 pt-2 text-center">
+                                <div class="bg-slate-900/50 p-3 rounded border border-slate-700/30">
+                                    <div class="text-xl font-bold text-blue-400">100%</div>
+                                    <div class="text-[10px] text-slate-400 uppercase">Tự động hóa</div>
+                                </div>
+                                <div class="bg-slate-900/50 p-3 rounded border border-slate-700/30">
+                                    <div class="text-xl font-bold text-green-400">&lt; 1s</div>
+                                    <div class="text-[10px] text-slate-400 uppercase">Ứng phó</div>
+                                </div>
+                                <div class="bg-slate-900/50 p-3 rounded border border-slate-700/30">
+                                    <div class="text-xl font-bold text-purple-400">Central</div>
+                                    <div class="text-[10px] text-slate-400 uppercase">Quản lý</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 5-Stage Continuous Workflow Section -->
+    <section id="workflow" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs uppercase tracking-widest font-bold text-red-600 mb-2">Quy Trình Hoạt Động</h2>
+                <h3 class="text-3xl font-bold text-slate-900 sm:text-4xl">Luồng An Ninh Liên Tục 5 Giai Đoạn</h3>
+                <p class="mt-4 text-slate-600">DraySOAR kết nối các giai đoạn bảo mật thành một quy trình làm việc khép kín, tự động và liên tục.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-5 gap-6">
+                <!-- Step 1 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 relative flex flex-col justify-between hover:shadow-lg transition-shadow">
+                    <div>
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center font-bold text-lg mb-4">1</div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-2">Phát Hiện (Detect)</h4>
+                        <p class="text-sm text-slate-600 mb-4">Nhận diện các hoạt động đáng ngờ trên toàn bộ hệ thống mạng và thiết bị.</p>
+                    </div>
+                    <div class="text-xs bg-white p-3 rounded border border-slate-200 text-slate-500 space-y-1">
+                        <span class="font-semibold text-slate-700 block mb-1">Nguồn dữ liệu:</span>
+                        <div>• Suricata & Zeek</div>
+                        <div>• DrayEDR</div>
+                        <div>• Windows Defender</div>
+                        <div>• IP Reputation</div>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 relative flex flex-col justify-between hover:shadow-lg transition-shadow">
+                    <div>
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center font-bold text-lg mb-4">2</div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-2">Đánh Giá (Assess)</h4>
+                        <p class="text-sm text-slate-600 mb-4">Hiểu rõ mức độ rủi ro dựa trên ngữ cảnh mối đe dọa thực tế.</p>
+                    </div>
+                    <div class="text-xs bg-white p-3 rounded border border-slate-200 text-slate-500 space-y-1">
+                        <span class="font-semibold text-slate-700 block mb-1">Công cụ:</span>
+                        <div>• Threat Intelligence</div>
+                        <div>• Endpoint Context</div>
+                        <div>• WinRisk Analysis</div>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 relative flex flex-col justify-between hover:shadow-lg transition-shadow">
+                    <div>
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center font-bold text-lg mb-4">3</div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-2">Điều Tra (Investigate)</h4>
+                        <p class="text-sm text-slate-600 mb-4">Xây dựng bức tranh toàn cảnh về sự cố an ninh mạng.</p>
+                    </div>
+                    <div class="text-xs bg-white p-3 rounded border border-slate-200 text-slate-500 space-y-1">
+                        <span class="font-semibold text-slate-700 block mb-1">Thông tin thu thập:</span>
+                        <div>• Lưu lượng Mạng</div>
+                        <div>• Dữ liệu Endpoint</div>
+                        <div>• Mã độc & Lỗ hổng</div>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 relative flex flex-col justify-between hover:shadow-lg transition-shadow">
+                    <div>
+                        <div class="w-10 h-10 bg-red-100 text-red-600 rounded-xl flex items-center justify-center font-bold text-lg mb-4">4</div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-2">Phản Ứng (Respond)</h4>
+                        <p class="text-sm text-slate-600 mb-4">Thực thi hành động khắc phục tức thì, loại bỏ mối đe dọa.</p>
+                    </div>
+                    <div class="text-xs bg-white p-3 rounded border border-slate-200 text-slate-500 space-y-1">
+                        <span class="font-semibold text-slate-700 block mb-1">Giải pháp:</span>
+                        <div>• DraySOAR Playbooks</div>
+                        <div>• Tương quan sự kiện</div>
+                        <div>• Hành động phản ứng tự động</div>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="bg-slate-50 border border-slate-200 rounded-2xl p-6 relative flex flex-col justify-between hover:shadow-lg transition-shadow">
+                    <div>
+                        <div class="w-10 h-10 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center font-bold text-lg mb-4">5</div>
+                        <h4 class="text-lg font-bold text-slate-900 mb-2">Quản Lý (Manage)</h4>
+                        <p class="text-sm text-slate-600 mb-4">Duy trì khả năng quan sát và kiểm soát vận hành liên tục.</p>
+                    </div>
+                    <div class="text-xs bg-white p-3 rounded border border-slate-200 text-slate-500 space-y-1">
+                        <span class="font-semibold text-slate-700 block mb-1">Phạm vi:</span>
+                        <div>• Giám sát tập trung</div>
+                        <div>• Điều tra chi tiết</div>
+                        <div>• Vận hành an ninh (SecOps)</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Security Intelligence Ecosystem -->
+    <section id="intelligence" class="py-20 bg-slate-900 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs uppercase tracking-widest font-bold text-blue-400 mb-2">Hệ Thống Tích Hợp</h2>
+                <h3 class="text-3xl font-bold sm:text-4xl">Trí Tuệ An Ninh Toàn Diện</h3>
+                <p class="mt-4 text-slate-400">DraySOAR hợp nhất dữ liệu an ninh từ nhiều tầng: Mạng (Network), Thiết bị đầu cuối (Endpoint), Mã độc (Malware) và Lỗ hổng bảo mật.</p>
+            </div>
+
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Network Intelligence -->
+                <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-8">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="p-3 bg-blue-600/20 text-blue-400 rounded-xl border border-blue-500/30">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold">An Ninh Mạng (Network Intelligence)</h4>
+                            <p class="text-xs text-slate-400">Giám sát và phân tích lưu lượng mạng đa góc nhìn</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-700/50">
+                            <h5 class="text-blue-400 font-semibold mb-1">Suricata - Network Intrusion Detection</h5>
+                            <p class="text-sm text-slate-300">Phát hiện các hành vi xâm nhập, lưu lượng truy cập bất thường hoặc độc hại dựa trên luật nhận dạng chuẩn quốc tế.</p>
+                        </div>
+                        <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-700/50">
+                            <h5 class="text-blue-400 font-semibold mb-1">Zeek - Network Analysis</h5>
+                            <p class="text-sm text-slate-300">Phân tích sâu kết nối mạng, giải mã giao thức và phát hiện các giao tiếp bất thường trong hệ thống nội bộ.</p>
+                        </div>
+                        <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-700/50">
+                            <h5 class="text-blue-400 font-semibold mb-1">IP Reputation - Risk Intelligence</h5>
+                            <p class="text-sm text-slate-300">Cập nhật danh sách địa chỉ IP có độ rủi ro cao hoặc bị nghi ngờ độc hại để chủ động ngăn chặn.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Endpoint & Threat Intelligence -->
+                <div class="bg-slate-800/50 border border-slate-700 rounded-2xl p-8">
+                    <div class="flex items-center space-x-3 mb-6">
+                        <div class="p-3 bg-red-600/20 text-red-400 rounded-xl border border-red-500/30">
+                            <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold">An Ninh Endpoint (Endpoint Security)</h4>
+                            <p class="text-xs text-slate-400">Kiểm soát thiết bị đầu cuối và phát hiện mã độc</p>
+                        </div>
+                    </div>
+                    <div class="space-y-4">
+                        <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-700/50">
+                            <h5 class="text-red-400 font-semibold mb-1">DrayEDR - Endpoint Visibility & Activity</h5>
+                            <p class="text-sm text-slate-300">Cung cấp thông tin chi tiết: Trạng thái thiết bị, IP/MAC, Phần mềm đã cài đặt, Tiến trình (Processes), Kết nối, Dịch vụ và Lịch trình Task.</p>
+                        </div>
+                        <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-700/50">
+                            <h5 class="text-red-400 font-semibold mb-1">Windows Defender Integration</h5>
+                            <p class="text-sm text-slate-300">Thu thập các phát hiện mã độc, thông tin mối đe dọa và trạng thái bảo mật từ các máy trạm Windows trong hệ thống.</p>
+                        </div>
+                        <div class="bg-slate-900/60 p-4 rounded-xl border border-slate-700/50">
+                            <h5 class="text-red-400 font-semibold mb-1">Tương Quan Dữ Liệu (Event Correlation)</h5>
+                            <p class="text-sm text-slate-300">DraySOAR kết nối thông tin giữa sự cố mạng và tình trạng máy trạm để đưa ra phản ứng chính xác nhất.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Playbooks & Automation Section -->
+    <section id="playbooks" class="py-20 bg-slate-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                <div class="lg:col-span-5 space-y-6">
+                    <h2 class="text-xs uppercase tracking-widest font-bold text-blue-600">Phản Ứng Tự Động</h2>
+                    <h3 class="text-3xl font-bold text-slate-900 sm:text-4xl">DraySOAR Playbooks</h3>
+                    <p class="text-slate-600 leading-relaxed">
+                        Playbooks giúp kết nối các sự kiện an ninh hợp lệ với các hành động phản ứng đã được thiết lập trước. Điều này giảm thiểu tối đa các thao tác thủ công lặp đi lặp lại, đồng thời đảm bảo quy trình xử lý sự cố luôn nhất quán và nhanh chóng.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-start space-x-3 text-slate-700 text-sm">
+                            <svg class="w-5 h-5 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Tự động hóa hành động chặn IP nghi vấn ngay tại Gateway.</span>
+                        </li>
+                        <li class="flex items-start space-x-3 text-slate-700 text-sm">
+                            <svg class="w-5 h-5 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Cách ly thiết bị bị nhiễm mã độc khỏi mạng nội bộ thông qua DrayEDR.</span>
+                        </li>
+                        <li class="flex items-start space-x-3 text-slate-700 text-sm">
+                            <svg class="w-5 h-5 text-green-500 mt-0.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path></svg>
+                            <span>Gửi thông báo tức thì cho đội ngũ quản trị viên qua nhiều kênh.</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="lg:col-span-7">
+                    <div class="bg-white p-6 sm:p-8 rounded-2xl border border-slate-200 shadow-xl space-y-6">
+                        <h4 class="font-bold text-lg text-slate-900 border-b pb-4">Quy Trình Xử Lý Sự Cố (Incident Workflow)</h4>
+                        
+                        <div class="flex flex-col sm:flex-row items-center gap-4">
+                            <div class="w-full sm:w-1/3 bg-slate-100 p-4 rounded-xl text-center">
+                                <span class="text-xs text-slate-500 font-bold block mb-1">BƯỚC 1: SỰ KIỆN</span>
+                                <span class="text-sm font-semibold text-slate-800">Phát Hiện Nguy Cơ</span>
+                                <p class="text-[11px] text-slate-500 mt-1">Suricata/Zeek nhận diện lưu lượng bất thường</p>
+                            </div>
+                            <div class="hidden sm:block text-slate-400">➔</div>
+                            <div class="w-full sm:w-1/3 bg-blue-50 border border-blue-200 p-4 rounded-xl text-center">
+                                <span class="text-xs text-blue-600 font-bold block mb-1">BƯỚC 2: PLAYBOOK</span>
+                                <span class="text-sm font-semibold text-blue-900">Kích Hoạch Quy Tắc</span>
+                                <p class="text-[11px] text-blue-600 mt-1">Khớp điều kiện cảnh báo rủi ro</p>
+                            </div>
+                            <div class="hidden sm:block text-slate-400">➔</div>
+                            <div class="w-full sm:w-1/3 bg-red-50 border border-red-200 p-4 rounded-xl text-center">
+                                <span class="text-xs text-red-600 font-bold block mb-1">BƯỚC 3: HÀNH ĐỘNG</span>
+                                <span class="text-sm font-semibold text-red-900">Ứng Phó Tự Động</span>
+                                <p class="text-[11px] text-red-600 mt-1">Chặn kết nối & Cách ly Endpoint</p>
+                            </div>
+                        </div>
+
+                        <div class="bg-slate-900 text-slate-300 p-4 rounded-xl text-xs font-mono">
+                            <div class="text-slate-500">// Ví dụ cấu hình DraySOAR Smart Action</div>
+                            <div><span class="text-purple-400">IF</span> Event.Severity == <span class="text-green-400">'CRITICAL'</span> AND Event.Source == <span class="text-green-400">'Suricata'</span></div>
+                            <div><span class="text-purple-400">THEN</span> Trigger_Playbook(<span class="text-green-400">'Isolate_Host'</span>, Target: Event.DstIP)</div>
+                            <div><span class="text-purple-400">AND</span> Apply_Rule(<span class="text-green-400">'Block_IP_Gateway'</span>)</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Centralized Security Management -->
+    <section id="management" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-16">
+                <h2 class="text-xs uppercase tracking-widest font-bold text-red-600 mb-2">Quản Lý Trung Tâm</h2>
+                <h3 class="text-3xl font-bold text-slate-900 sm:text-4xl">Quản Lý Tập Trung Mạng & Endpoint</h3>
+                <p class="mt-4 text-slate-600">DraySOAR mang lại một giao diện điều khiển duy nhất cho toàn bộ hệ thống an ninh, giúp tối ưu vận hành CNTT.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16">
+                <!-- Dashboard -->
+                <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl hover:border-blue-500 transition-colors">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">1. Giám Sát Dashboard</h4>
+                    <p class="text-sm text-slate-600 mb-4">Hiển thị trạng thái an ninh tổng thể, cảnh báo mã độc, danh mục thiết bị và nhật ký hệ thống real-time.</p>
+                    <ul class="text-xs text-slate-500 space-y-1 font-medium">
+                        <li>• Trạng thái hệ thống & an ninh</li>
+                        <li>• Tổng hợp phát hiện mã độc</li>
+                        <li>• Thống kê lỗ hổng phần mềm</li>
+                    </ul>
+                </div>
+
+                <!-- Network & Endpoint Ops -->
+                <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl hover:border-blue-500 transition-colors">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 3v2m6-2v2M9 19v2m6-2v2M5 9H3m2 6H3m18-6h-2m2 6h-2M7 19h10a2 2 0 002-2V7a2 2 0 00-2-2H7a2 2 0 00-2 2v10a2 2 0 002 2zM9 9h6v6H9V9z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">2. Vận Hành Mạng & Endpoint</h4>
+                    <p class="text-sm text-slate-600 mb-4">Tích hợp TR-069 và VigorConnect để quản lý thiết bị mạng DrayTek cùng với các tác vụ tự động trên Endpoint.</p>
+                    <ul class="text-xs text-slate-500 space-y-1 font-medium">
+                        <li>• Tương thích thiết bị DrayTek</li>
+                        <li>• Lập lịch tác vụ định kỳ (Task Scheduler)</li>
+                        <li>• Quản lý danh sách tin cậy (Allowlist)</li>
+                    </ul>
+                </div>
+
+                <!-- Administration -->
+                <div class="bg-slate-50 border border-slate-200 p-6 rounded-2xl hover:border-blue-500 transition-colors">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mb-4">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z"></path></svg>
+                    </div>
+                    <h4 class="text-xl font-bold mb-2">3. Phân Quyền & Quản Trị</h4>
+                    <p class="text-sm text-slate-600 mb-4">Phân quyền chi tiết theo vai trò người dùng, nhóm tài khoản và hệ thống thông báo đa kênh.</p>
+                    <ul class="text-xs text-slate-500 space-y-1 font-medium">
+                        <li>• Phân quyền dựa trên vai trò (RBAC)</li>
+                        <li>• Nhóm người dùng & Thông báo</li>
+                        <li>• Cấu hình IP Reputation</li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Vigor3912S Deployment Highlight -->
+            <div class="bg-gradient-to-r from-slate-900 to-blue-950 text-white rounded-3xl p-8 sm:p-12 shadow-2xl">
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+                    <div class="lg:col-span-8 space-y-4">
+                        <span class="bg-red-600 text-white text-xs font-bold px-3 py-1 rounded-full uppercase">Mô Hình Triển Khai Tiêu Biểu</span>
+                        <h3 class="text-2xl sm:text-3xl font-bold">Tích Hợp DraySOAR Trên Router Gateway Vigor3912S</h3>
+                        <p class="text-slate-300 text-sm leading-relaxed">
+                            Vigor3912S trực tiếp lưu trữ DraySOAR song song với khả năng bảo vệ mạng ở cấp độ Gateway. Vigor3912S thực hiện ngăn chặn mối đe dọa thời gian thực, đồng thời Suricata & Zeek chạy trên thiết bị sẽ truyền các sự kiện an ninh về DraySOAR để giám sát, điều tra và kích hoạt Playbook phản ứng tức thì.
+                        </p>
+                    </div>
+                    <div class="lg:col-span-4 text-center">
+                        <div class="bg-slate-800/80 border border-slate-700 p-6 rounded-2xl inline-block w-full">
+                            <div class="text-red-500 font-extrabold text-2xl mb-1">Vigor3912S</div>
+                            <div class="text-xs text-slate-400 mb-4">High-Performance Security Gateway</div>
+                            <div class="text-xs bg-blue-600/30 text-blue-300 py-2 px-3 rounded border border-blue-500/30 font-mono">
+                                Gateway Protection + DraySOAR
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Direct Contact Information Section -->
+    <section id="contact" class="py-20 bg-slate-900 text-white relative border-t border-slate-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-3xl mx-auto mb-14">
+                <span class="inline-block px-3 py-1 bg-red-950/80 border border-red-700/50 rounded-full text-xs font-semibold text-red-400 uppercase tracking-wider mb-3">
+                    Nhà Phân Phối Chính Thức
+                </span>
+                <h2 class="text-3xl font-extrabold sm:text-4xl text-white">Liên Hệ Tư Vấn & Hỗ Trợ Kỹ Thuật</h2>
+                <p class="mt-3 text-slate-300 text-base">
+                    Đội ngũ chuyên gia của <strong class="text-red-500 font-bold">CTY TNHH CNTT AN PHÁT</strong> sẵn sàng hỗ trợ tư vấn giải pháp DraySOAR cho doanh nghiệp của bạn.
+                </p>
+            </div>
+
+            <!-- Contact Cards Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 max-w-6xl mx-auto">
+                <!-- Hotline Card -->
+                <a href="tel:1900633641" class="group bg-slate-800/90 border border-slate-700/80 hover:border-red-500 p-8 rounded-2xl shadow-xl transition-all hover:-translate-y-1 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-red-600/10 text-red-500 group-hover:bg-red-600 group-hover:text-white rounded-2xl flex items-center justify-center mb-6 transition-all duration-300 border border-red-500/20">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                    </div>
+                    <span class="text-xs uppercase tracking-wider font-semibold text-slate-400 mb-2">Hotline Tư Vấn / Kỹ Thuật</span>
+                    <span class="text-2xl font-black text-white group-hover:text-red-400 transition-colors">1900.633.641</span>
+                    <span class="text-xs text-slate-400 mt-3 bg-slate-900/80 px-3 py-1 rounded-full border border-slate-700">
+                        Hỗ trợ 24/7 toàn quốc
+                    </span>
+                </a>
+
+                <!-- Email Card -->
+                <a href="mailto:hotro@anphat.vn" class="group bg-slate-800/90 border border-slate-700/80 hover:border-blue-500 p-8 rounded-2xl shadow-xl transition-all hover:-translate-y-1 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-blue-600/10 text-blue-400 group-hover:bg-blue-600 group-hover:text-white rounded-2xl flex items-center justify-center mb-6 transition-all duration-300 border border-blue-500/20">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                    </div>
+                    <span class="text-xs uppercase tracking-wider font-semibold text-slate-400 mb-2">Email Hỗ Trợ</span>
+                    <span class="text-2xl font-black text-white group-hover:text-blue-400 transition-colors">hotro@anphat.vn</span>
+                    <span class="text-xs text-slate-400 mt-3 bg-slate-900/80 px-3 py-1 rounded-full border border-slate-700">
+                        Phản hồi trong vòng 2 giờ
+                    </span>
+                </a>
+
+                <!-- Website Card -->
+                <a href="https://www.anphat.vn" target="_blank" rel="noopener noreferrer" class="group bg-slate-800/90 border border-slate-700/80 hover:border-emerald-500 p-8 rounded-2xl shadow-xl transition-all hover:-translate-y-1 flex flex-col items-center text-center">
+                    <div class="w-16 h-16 bg-emerald-600/10 text-emerald-400 group-hover:bg-emerald-600 group-hover:text-white rounded-2xl flex items-center justify-center mb-6 transition-all duration-300 border border-emerald-500/20">
+                        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9m-9 9a9 9 0 019-9"></path>
+                        </svg>
+                    </div>
+                    <span class="text-xs uppercase tracking-wider font-semibold text-slate-400 mb-2">Website Chính Thức</span>
+                    <span class="text-2xl font-black text-white group-hover:text-emerald-400 transition-colors">www.anphat.vn</span>
+                    <span class="text-xs text-slate-400 mt-3 bg-slate-900/80 px-3 py-1 rounded-full border border-slate-700">
+                        Tra cứu sản phẩm & Giải pháp
+                    </span>
+                </a>
+            </div>
+
+            <!-- Distributor Footer Banner -->
+            <div class="mt-12 bg-slate-800/50 border border-slate-800 rounded-2xl p-6 max-w-4xl mx-auto text-center flex flex-col sm:flex-row items-center justify-between gap-4">
+                <div class="text-left">
+                    <h4 class="text-base font-bold text-white">CTY TNHH CNTT AN PHÁT</h4>
+                    <p class="text-xs text-slate-400 mt-0.5">Nhà phân phối thiết bị & giải pháp mạng hàng đầu tại Việt Nam</p>
+                </div>
+                <div class="flex items-center space-x-3 text-xs font-bold text-slate-300">
+                    <span class="px-3 py-1.5 bg-slate-900 rounded-lg border border-slate-700/60 text-red-500">DrayTek</span>
+                    <span class="px-3 py-1.5 bg-slate-900 rounded-lg border border-slate-700/60 text-blue-400">APTEK</span>
+                    <span class="px-3 py-1.5 bg-slate-900 rounded-lg border border-slate-700/60 text-yellow-500">DinTek</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-slate-950 text-slate-500 py-8 border-t border-slate-800 text-xs text-center">
+        <div class="max-w-7xl mx-auto px-4">
+            <p>© 2026 CTY TNHH CNTT AN PHÁT - Phân phối chính thức DrayTek tại Việt Nam. Tất cả các quyền được bảo lưu.</p>
+            <p class="mt-2 text-slate-600">DraySOAR, DrayEDR, VigorConnect và Vigor3912S là các thương hiệu đăng ký của DrayTek.</p>
+        </div>
+    </footer>
+
+</body>
+</html>
