@@ -5,62 +5,67 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>DraySOAR – Biến cảnh báo an ninh mạng thành hành động phối hợp | DrayTek</title>
 <meta name="description" content="DraySOAR giúp đội IT doanh nghiệp vừa và nhỏ gom cảnh báo từ mạng và máy tính, hiểu rủi ro, điều tra và phản ứng tự động theo kịch bản.">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--navy:#1B2A4A;--org:#F37021;--bg:#f5f7fb;--tx:#2b3445;--mut:#5d6881;--card:#fff;--line:#dfe5f0}
+:root{--navy:#1A4F9C;--org:#1F6FD6;--red:#E2231A;--bg:#F0F6FE;--tx:#14213D;--mut:#4F5D75;--card:#fff;--line:#D9E4F5}
 *{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;font-family:"Segoe UI",Arial,sans-serif;color:var(--tx);background:#fff;line-height:1.65;font-size:17px}
+body{margin:0;font-family:Inter,"Segoe UI",Arial,sans-serif;color:var(--tx);background:#fff;line-height:1.65;font-size:17px}
 img{max-width:100%;height:auto;display:block}
 a{color:inherit}
 .w{max-width:1120px;margin:0 auto;padding:0 20px}
-nav{position:sticky;top:0;z-index:9;background:rgba(27,42,74,.97);color:#fff}
+nav{position:sticky;top:0;z-index:9;background:rgba(255,255,255,.96);color:var(--tx);border-bottom:1px solid var(--line);backdrop-filter:blur(6px)}
 nav .w{display:flex;align-items:center;gap:22px;height:56px;overflow-x:auto;white-space:nowrap}
-nav b{color:var(--org);font-size:19px}nav a{text-decoration:none;font-size:14px;opacity:.9}nav a:hover{opacity:1;color:var(--org)}
-.btn{display:inline-block;background:var(--org);color:#fff;padding:12px 26px;border-radius:30px;text-decoration:none;font-weight:600}
-.btn.o{background:none;border:2px solid #fff}
-.hero{background:linear-gradient(135deg,#1B2A4A,#2f4a85);color:#fff;padding:70px 0}
+nav img{height:34px;width:auto}nav a{text-decoration:none;font-size:14px;font-weight:500;color:var(--mut)}nav a:hover{color:var(--org)}
+.btn{display:inline-block;background:var(--red);box-shadow:0 6px 16px rgba(227,30,36,.28);transition:transform .2s;color:#fff;padding:12px 26px;border-radius:30px;text-decoration:none;font-weight:600}
+.btn:hover{transform:translateY(-2px)}.btn.o{background:#fff;color:var(--org);border:2px solid var(--org);box-shadow:none}
+h1,h2,h3,h4,.steps b,.btn,th{font-family:"Be Vietnam Pro",Inter,sans-serif}
+.hero{position:relative;overflow:hidden;background:radial-gradient(rgba(31,111,214,.14) 1.5px,transparent 1.5px) 0 0/26px 26px,linear-gradient(135deg,#F0F6FE,#fff);color:var(--tx);padding:70px 0}
 .hero .w{display:grid;grid-template-columns:1.3fr 1fr;gap:40px;align-items:center}
-.hero h1{font-size:46px;margin:0 0 8px}.hero h2{font-size:24px;font-weight:500;color:#ffd2b5;margin:0 0 18px}
-.hero p{opacity:.92}.hero img{max-width:340px;margin:auto}
+.hero h1{font-size:46px;margin:0 0 8px;color:var(--navy)}.hero h2{font-size:24px;font-weight:600;color:var(--org);margin:0 0 18px}
+.hero p{color:var(--mut)}.hero img{max-width:340px;margin:auto}
 section{padding:64px 0}section.alt{background:var(--bg)}
 .eyebrow{color:var(--org);font-weight:700;letter-spacing:.06em;font-size:13px;text-transform:uppercase}
 h3.t{font-size:32px;color:var(--navy);margin:4px 0 10px;line-height:1.25}
 .lead{color:var(--mut);max-width:860px}
-.easy{background:#fff4ec;border-left:4px solid var(--org);padding:14px 18px;border-radius:8px;margin:20px 0;font-size:16px}
-.easy b{color:var(--org)}
+.easy{background:var(--bg);border-left:4px solid var(--red);padding:14px 18px;border-radius:8px;margin:20px 0;font-size:16px}
+.easy b{color:var(--navy)}
 .grid{display:grid;gap:20px;margin-top:26px}.g2{grid-template-columns:repeat(2,1fr)}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
-.card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:22px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px;transition:transform .25s,box-shadow .25s}.card:hover{transform:translateY(-4px);box-shadow:0 12px 28px rgba(11,58,140,.12)}
 .card h4{margin:0 0 6px;color:var(--navy);font-size:19px}.card p{margin:6px 0 0;font-size:15.5px;color:var(--mut)}
-.card .n{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--org);color:#fff;font-weight:700;margin-bottom:8px}
+.card .n{display:inline-grid;place-items:center;width:32px;height:32px;border-radius:50%;background:var(--navy);color:#fff;font-weight:700;margin-bottom:8px}
 .steps{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin:26px 0}
-.steps div{background:var(--navy);color:#fff;border-radius:12px;padding:16px;font-size:14.5px}
+.steps div{background:#fff;color:var(--tx);border:1px solid var(--line);border-top:4px solid var(--org);border-radius:12px;padding:16px;font-size:14.5px;font-weight:500}
 .steps b{display:block;color:var(--org);font-size:17px}
 .split{display:grid;grid-template-columns:1fr 1fr;gap:36px;align-items:center;margin-top:30px}
 .split.r .im{order:2}
-.im img{border-radius:12px;border:1px solid var(--line);background:#fff;margin:auto}
+.im img{border-radius:14px;border:1px solid var(--line);background:#fff;margin:auto}
 .split h4{font-size:22px;color:var(--navy);margin:0 0 8px}
 ul.tick{padding:0;list-style:none}ul.tick li{padding-left:26px;position:relative;margin:8px 0}
 ul.tick li:before{content:"✔";position:absolute;left:0;color:var(--org)}
-.tag{display:inline-block;background:#e8edf8;color:var(--navy);border-radius:20px;padding:3px 12px;font-size:13.5px;margin:3px 3px 3px 0}
+.tag{display:inline-block;background:var(--bg);border:1px solid var(--line);color:var(--navy);border-radius:20px;padding:3px 12px;font-size:13.5px;margin:3px 3px 3px 0}
 .tw{overflow-x:auto;margin-top:20px}table{border-collapse:collapse;width:100%;font-size:15px;min-width:640px}
 th{background:var(--navy);color:#fff;text-align:left;padding:10px 12px}td{padding:10px 12px;border-bottom:1px solid var(--line);vertical-align:top;background:#fff}
-td:first-child{font-weight:700;color:var(--org)}
+td:first-child{font-weight:700;color:var(--navy)}
 .mini{text-align:center}.mini img{width:150px;margin:0 auto 10px}
 .full img{border-radius:14px;margin:26px auto 0;border:1px solid var(--line)}
 .note{font-size:13.5px;color:var(--mut);margin-top:12px}
 details{margin-top:14px}summary{cursor:pointer;color:var(--org);font-weight:600}
-.cta{background:linear-gradient(135deg,#1B2A4A,#2f4a85);color:#fff;text-align:center;padding:64px 0}
-.cta h3{font-size:32px;margin:0 0 10px}
-footer{background:#111b33;color:#aab4cc;font-size:14px;padding:28px 0;text-align:center}
+.cta{background:var(--bg);border-top:1px solid var(--line);color:var(--tx);text-align:center;padding:64px 0}
+.cta h3{font-size:32px;margin:0 0 10px;color:var(--navy)}
+footer{background:#fff;border-top:1px solid var(--line);color:var(--mut);font-size:14px;padding:28px 0;text-align:center}
 .gl dt{font-weight:700;color:var(--navy);margin-top:12px}.gl dd{margin:2px 0 0;color:var(--mut)}
+.rv{opacity:0;transform:translateY(18px);transition:opacity .6s,transform .6s}.rv.in{opacity:1;transform:none}
+@media(prefers-reduced-motion:reduce){.rv{opacity:1;transform:none;transition:none}.card,.btn{transition:none}}
+.ft{display:flex;flex-wrap:wrap;gap:18px;align-items:center;justify-content:center;margin-bottom:14px}.ft img{height:32px}.pill{background:#fff;border-radius:10px;padding:6px 12px;display:flex;align-items:center}.pill img{height:22px}.ft small{color:var(--mut)}.pill{border:1px solid var(--line)}
 @media(max-width:860px){.hero .w,.split{grid-template-columns:1fr}.split.r .im{order:0}.g2,.g3,.g4{grid-template-columns:1fr}.steps{grid-template-columns:1fr}.hero h1{font-size:36px}h3.t{font-size:26px}}
 </style>
 </head>
 <body>
-<nav><div class="w"><b>DraySOAR</b><a href="#tong-quan">Tổng quan</a><a href="#nist">NIST CSF 2.0</a><a href="#thong-tin">Thông tin an ninh</a><a href="#tam-nhin">Tầm nhìn tập trung</a><a href="#phan-ung">Phản ứng tự động</a><a href="#he-sinh-thai">Hệ sinh thái</a><a href="#van-hanh">Vận hành</a><a href="#loi-ich">Lợi ích</a><a href="#ung-dung">Ứng dụng</a><a href="#thuat-ngu">Thuật ngữ</a></div></nav>
+<nav><div class="w"><a href="#tong-quan" style="opacity:1"><img src="images/logo-anphat-ngang.svg" alt="An Phát Technology"></a><a href="#tong-quan">Tổng quan</a><a href="#nist">NIST CSF 2.0</a><a href="#thong-tin">Thông tin an ninh</a><a href="#tam-nhin">Tầm nhìn tập trung</a><a href="#phan-ung">Phản ứng tự động</a><a href="#he-sinh-thai">Hệ sinh thái</a><a href="#van-hanh">Vận hành</a><a href="#loi-ich">Lợi ích</a><a href="#ung-dung">Ứng dụng</a><a href="#thuat-ngu">Thuật ngữ</a></div></nav>
 
 <header class="hero" id="tong-quan"><div class="w">
 <div>
-<div class="eyebrow" style="color:#ffd2b5">Giải pháp an ninh mạng DrayTek</div>
+<div class="eyebrow">Giải pháp an ninh mạng DrayTek</div>
 <h1>DraySOAR</h1>
 <h2>Biến tín hiệu an ninh thành hành động phối hợp</h2>
 <p>Từ phát hiện đến phản ứng, trên toàn bộ hệ sinh thái an ninh mạng DrayTek. DraySOAR gom cảnh báo từ mạng, máy tính và lỗ hổng phần mềm về một nơi, giúp đội IT hiểu chuyện gì đang xảy ra và xử lý nhanh hơn, ngay cả khi nhân sự bảo mật còn ít.</p>
@@ -70,15 +75,15 @@ footer{background:#111b33;color:#aab4cc;font-size:14px;padding:28px 0;text-align
 </div></header>
 
 <section><div class="w">
-<div class="eyebrow">Từ phát hiện đến phản ứng</div>
-<h3 class="t">Chỉ phát hiện thôi là chưa đủ</h3>
+<div class="eyebrow">Hiểu mạng, hiểu điều bạn cần</div>
+<h3 class="t">Chỉ phát hiện thôi là chưa đủ, hệ thống của bạn đang gặp vấn đề gì?</h3>
 <p class="lead">Tường lửa, giám sát mạng, bảo vệ máy tính và quét lỗ hổng đều đưa ra cảnh báo riêng. Nhưng khi cảnh báo đến từ nhiều hệ thống khác nhau, đội IT vẫn phải tự ghép các mảnh lại: chuyện gì đã xảy ra, cái nào quan trọng, và nên làm gì. Với doanh nghiệp vừa và nhỏ ít người làm bảo mật, việc này rất tốn thời gian.</p>
 <p class="lead"><b>DraySOAR</b> kết nối “nhìn thấy” với “hành động”: gom giám sát mạng, bảo mật máy tính, đánh giá lỗ hổng, quản lý sự kiện và phản ứng tự động vào một môi trường tập trung.</p>
-<div class="easy"><b>Hiểu đơn giản:</b> SOAR (Security Orchestration, Automation and Response) là “trung tâm điều phối an ninh”. Giống như một người trực tổng đài, nhận mọi tín hiệu báo động, xem xét ngữ cảnh, rồi làm theo quy trình bạn đã đặt sẵn: nhắn quản trị viên, chặn IP xấu, cô lập máy nghi nhiễm…</div>
+<div class="easy"><b>Hiểu đơn giản:</b> SOAR (Security Orchestration, Automation and Response) là “trung tâm điều phối an ninh”. Cứ hình dung một anh trực tổng đài không bao giờ buồn ngủ, nhận mọi tín hiệu báo động, xem xét ngữ cảnh, rồi làm theo quy trình bạn đã đặt sẵn: nhắn quản trị viên, chặn IP xấu, cô lập máy nghi nhiễm… trong khi bạn vẫn đang uống cà phê ☕</div>
 
 <h3 class="t" style="font-size:26px;margin-top:40px">DraySOAR bổ sung điều gì?</h3>
 <p class="lead">Các công cụ bảo mật hiện có vẫn làm đúng việc của mình. DraySOAR thêm một lớp vận hành an ninh tập trung ở phía trên, để biến phát hiện thành hành động.</p>
-<div class="steps"><div><b>1</b>Tín hiệu an ninh</div><div><b>2</b>Đánh giá &amp; liên kết</div><div><b>3</b>Điều tra</div><div><b>4</b>Kịch bản (Playbook)</div><div><b>5</b>Phản ứng phối hợp</div></div>
+<div class="rv steps"><div><b>1</b>Tín hiệu an ninh</div><div><b>2</b>Đánh giá &amp; liên kết</div><div><b>3</b>Điều tra</div><div><b>4</b>Kịch bản (Playbook)</div><div><b>5</b>Phản ứng phối hợp</div></div>
 <p class="lead">DraySOAR kết hợp thông tin từ <b>Suricata, Zeek, IP Reputation, DrayEDR, Windows Defender và WinRisk</b> với các Playbook SOAR để giúp đội IT:</p>
 <ul class="tick">
 <li>Gom thông tin về mạng, máy tính và lỗ hổng vào một chỗ</li>
@@ -93,7 +98,7 @@ footer{background:#111b33;color:#aab4cc;font-size:14px;padding:28px 0;text-align
 <div class="eyebrow">Khung chuẩn quốc tế</div>
 <h3 class="t">Vòng đời an ninh mạng theo NIST CSF 2.0</h3>
 <p class="lead">DraySOAR vận hành theo Khung An ninh mạng NIST (CSF) 2.0, kết nối khả năng quan sát, đánh giá rủi ro, bảo vệ, phát hiện, điều tra và phản ứng trong một môi trường tập trung, trải đều qua 6 chức năng: GOVERN, IDENTIFY, PROTECT, DETECT, RESPOND và RECOVER.</p>
-<div class="split"><div class="im"><img src="images/nist.png" alt="NIST CSF 2.0" loading="lazy"></div>
+<div class="rv split"><div class="im"><img src="images/nist.png" alt="NIST CSF 2.0" loading="lazy"></div>
 <div><div class="easy" style="margin-top:0"><b>NIST CSF là gì?</b> Là bộ khung do Viện Tiêu chuẩn và Công nghệ Hoa Kỳ ban hành, được nhiều tổ chức dùng làm “bản đồ” để xây dựng an ninh mạng bài bản: quản trị, nhận diện tài sản, bảo vệ, phát hiện, ứng phó và khôi phục.</div></div></div>
 <div class="tw"><table><tr><th>Chức năng</th><th>Năng lực của DraySOAR</th><th>Vai trò</th></tr>
 <tr><td>GOVERN<br><small>Quản trị</small></td><td>Phân quyền người dùng, chính sách an ninh, quản trị tập trung</td><td>Thiết lập quản trị và kiểm soát vận hành an ninh</td></tr>
@@ -105,7 +110,7 @@ footer{background:#111b33;color:#aab4cc;font-size:14px;padding:28px 0;text-align
 
 <h3 class="t" style="font-size:26px;margin-top:50px">Từ phát hiện đến phản ứng phối hợp</h3>
 <p class="lead">Phát hiện hoạt động đáng ngờ chỉ là bước đầu. DraySOAR nối các giai đoạn thành một quy trình liên tục:</p>
-<div class="split"><div class="im"><img src="images/workflow.png" alt="Quy trình DraySOAR" loading="lazy"></div>
+<div class="rv split"><div class="im"><img src="images/workflow.png" alt="Quy trình DraySOAR" loading="lazy"></div>
 <div>
 <div class="card" style="margin-bottom:12px"><h4>1. Detect – Phát hiện</h4><p>Nhận biết hoạt động đáng ngờ. Nguồn: Suricata, Zeek, DrayEDR, Windows Defender, IP Reputation.</p></div>
 <div class="card" style="margin-bottom:12px"><h4>2. Assess – Đánh giá</h4><p>Hiểu mức độ rủi ro, nhờ thông tin tình báo mối đe dọa, ngữ cảnh máy tính, WinRisk.</p></div>
@@ -120,21 +125,21 @@ footer{background:#111b33;color:#aab4cc;font-size:14px;padding:28px 0;text-align
 <h3 class="t">Nhìn xa hơn một cảnh báo đơn lẻ</h3>
 <p class="lead">Một cảnh báo mạng riêng lẻ không cho biết máy nào bị ảnh hưởng, phần mềm nào đang rủi ro hay mối đe dọa nghiêm trọng đến đâu. DraySOAR kết hợp thông tin từ ba mảng: <b>mạng, máy tính &amp; mã độc, lỗ hổng &amp; rủi ro</b>, để mỗi sự kiện có thêm ngữ cảnh.</p>
 
-<div class="split"><div class="im"><img src="images/net.png" alt="An ninh mạng" loading="lazy"></div>
+<div class="rv split"><div class="im"><img src="images/net.png" alt="An ninh mạng" loading="lazy"></div>
 <div><h4>Thông tin an ninh mạng: Hiểu điều gì đang xảy ra trên mạng</h4>
 <p>Hoạt động đáng ngờ có thể là kiểu tấn công đã biết, giao tiếp bất thường, hoặc kết nối tới địa chỉ IP nguy hiểm. DraySOAR dùng ba nguồn bổ trợ cho nhau:</p>
 <ul class="tick"><li><b>Suricata</b>: hệ thống phát hiện xâm nhập mạng, tìm lưu lượng đáng ngờ hoặc độc hại</li>
 <li><b>Zeek</b>: phân tích kết nối, tìm các giao tiếp bất thường</li>
 <li><b>IP Reputation</b>: nhận biết địa chỉ IP đáng ngờ hoặc rủi ro cao</li></ul></div></div>
 
-<div class="split r"><div class="im"><img src="images/endpoint.png" alt="Bảo mật máy tính và mã độc" loading="lazy"></div>
+<div class="rv split r"><div class="im"><img src="images/endpoint.png" alt="Bảo mật máy tính và mã độc" loading="lazy"></div>
 <div><h4>Máy tính &amp; mã độc: Hiểu điều gì đang xảy ra trên máy bị ảnh hưởng</h4>
 <p>Cảnh báo mạng sẽ hữu ích hơn nhiều khi bạn biết chuyện gì đang diễn ra trên chính máy đó.</p>
 <ul class="tick"><li><b>DrayEDR</b>: cho thấy trạng thái, phần cứng, IP/MAC, phần mềm cài đặt, kết nối, tiến trình, chương trình tự khởi động, tường lửa, dịch vụ và tác vụ theo lịch</li>
 <li><b>Windows Defender</b>: cung cấp phát hiện mã độc, thông tin mối đe dọa và trạng thái phát hiện từ máy Windows</li></ul>
 <p>Nhờ đó quản trị viên xác định nhanh máy bị ảnh hưởng và xem lại hoạt động liên quan.</p></div></div>
 
-<div class="split"><div class="im"><img src="images/risk.png" alt="Lỗ hổng và rủi ro" loading="lazy"></div>
+<div class="rv split"><div class="im"><img src="images/risk.png" alt="Lỗ hổng và rủi ro" loading="lazy"></div>
 <div><h4>Lỗ hổng &amp; rủi ro: Biết cái gì dễ bị tấn công, và cái gì cần ưu tiên</h4>
 <p>Tìm ra lỗ hổng mới là bước đầu. Bạn còn cần biết nó nghiêm trọng đến đâu, đã bị khai thác ngoài đời chưa và khả năng bị khai thác cao hay thấp. <b>WinRisk</b> kết hợp nhiều nguồn dữ liệu cho các máy được quản lý:</p>
 <p><span class="tag">CVE: định danh lỗ hổng</span><span class="tag">CVSS: mức nghiêm trọng</span><span class="tag">KEV: đã bị khai thác thực tế</span><span class="tag">EPSS: xác suất bị khai thác</span><span class="tag">CPE: nhận diện phần mềm</span></p>
@@ -146,21 +151,21 @@ footer{background:#111b33;color:#aab4cc;font-size:14px;padding:28px 0;text-align
 <h3 class="t">Biến dữ liệu an ninh thành ngữ cảnh có thể hành động</h3>
 <p class="lead">DraySOAR gom sự kiện an ninh, thông tin máy tính, phát hiện mã độc và tình báo lỗ hổng phần mềm về một nơi để quản trị viên điều tra sự cố, đánh giá rủi ro và theo dõi việc xử lý với đầy đủ bối cảnh.</p>
 
-<div class="split"><div class="im"><img src="images/events.png" alt="Sự kiện an ninh hợp nhất" loading="lazy"></div>
+<div class="rv split"><div class="im"><img src="images/events.png" alt="Sự kiện an ninh hợp nhất" loading="lazy"></div>
 <div><h4>Thấy sự kiện, ngữ cảnh và cách xử lý ngay tại một nơi</h4>
 <ul class="tick"><li><b>Chi tiết sự kiện:</b> tên sự kiện, IP nguồn/đích, nguồn phát hiện, rủi ro tiềm ẩn, thông tin mối đe dọa</li>
 <li><b>Điều tra:</b> tên máy, IP/MAC, khuyến nghị xử lý, thời gian phản ứng</li>
 <li><b>Phản ứng &amp; quản lý:</b> hành động SOAR, người phụ trách, trạng thái xử lý</li></ul>
 <p>Quản trị viên có thể giao việc, điều tra, đóng sự cố và lưu lại để tra cứu hoặc kiểm toán sau này.</p></div></div>
 
-<div class="split r"><div class="im"><img src="images/malware.png" alt="Mã độc" loading="lazy"></div>
+<div class="rv split r"><div class="im"><img src="images/malware.png" alt="Mã độc" loading="lazy"></div>
 <div><h4>Nối cảnh báo mã độc với máy bị ảnh hưởng</h4>
 <ul class="tick"><li><b>Tổng quan mối đe dọa:</b> loại mã độc, xu hướng phát hiện, tên và loại mối đe dọa</li>
 <li><b>Máy bị ảnh hưởng:</b> các máy bị nhiều nhất, thời điểm phát hiện</li>
 <li><b>Điều tra:</b> lịch sử hành động, phân công, ghi chú điều tra</li></ul>
 <p>Giúp xác định máy nhiễm, xem lại hoạt động mã độc và lưu hồ sơ xử lý cho từng sự cố.</p></div></div>
 
-<div class="split"><div class="im"><img src="images/vuln.png" alt="Đánh giá lỗ hổng" loading="lazy"></div>
+<div class="rv split"><div class="im"><img src="images/vuln.png" alt="Đánh giá lỗ hổng" loading="lazy"></div>
 <div><h4>Không chỉ tìm CVE, mà hiểu mức độ phơi nhiễm</h4>
 <p>Cùng một lỗ hổng có thể rủi ro khác nhau ở mỗi môi trường. DraySOAR đặt tình báo lỗ hổng của WinRisk cạnh thông tin phần mềm và máy tính để bạn biết phần mềm dễ bị tấn công đang cài ở đâu.</p>
 <ul class="tick"><li><b>Lỗ hổng:</b> CVE và mức nghiêm trọng</li><li><b>Ưu tiên rủi ro:</b> KEV, EPSS</li><li><b>Phơi nhiễm:</b> phần mềm và máy bị ảnh hưởng</li></ul>
@@ -171,9 +176,9 @@ footer{background:#111b33;color:#aab4cc;font-size:14px;padding:28px 0;text-align
 <div class="eyebrow">Điều phối &amp; phản ứng tự động</div>
 <h3 class="t">Biến điều tra thành hành động phối hợp</h3>
 <p class="lead">Sau khi phát hiện và điều tra, câu hỏi còn lại là: <b>làm gì tiếp theo?</b> Xử lý thủ công nghĩa là xem sự kiện, chọn cách xử lý rồi tự thực hiện trên từng hệ thống. <b>Playbook</b> của DraySOAR nối các sự kiện đủ điều kiện với hành động đã định sẵn, giảm thao tác lặp lại và giúp phản ứng nhất quán.</p>
-<div class="easy"><b>Playbook là gì?</b> Là “kịch bản xử lý” theo dạng: <i>nếu</i> xảy ra sự kiện X nhiều hơn N lần <i>thì</i> chặn IP / tắt cổng / cô lập máy. Bạn đặt luật một lần, hệ thống tự làm khi điều kiện xảy ra.</div>
+<div class="easy"><b>Playbook là gì?</b> Là “kịch bản xử lý” theo dạng: <i>nếu</i> xảy ra sự kiện X nhiều hơn N lần <i>thì</i> chặn IP / tắt cổng / cô lập máy. Bạn đặt luật một lần, hệ thống tự làm khi điều kiện xảy ra. Đỡ phải thức đêm canh cảnh báo!</div>
 
-<div class="split"><div class="im"><img src="images/playbook.png" alt="Cấu hình Playbook" loading="lazy"></div>
+<div class="rv split"><div class="im"><img src="images/playbook.png" alt="Cấu hình Playbook" loading="lazy"></div>
 <div><h4>Quy định khi nào và cách nào phản ứng</h4>
 <p>Quản trị viên chọn sự kiện làm điều kiện kích hoạt Playbook, rồi đặt điều kiện để quyết định khi nào hành động được thực thi.</p>
 <ul class="tick"><li><b>Nguồn an ninh:</b> Suricata, Zeek, DrayEDR, Windows Defender, WinRisk</li>
@@ -181,16 +186,16 @@ footer{background:#111b33;color:#aab4cc;font-size:14px;padding:28px 0;text-align
 <li><b>Điều kiện:</b> đếm số sự kiện, thời gian/độ trễ, kiểm tra IP Reputation, liên kết sự kiện</li></ul>
 <p>Khi cần thêm ngữ cảnh, <b>liên kết sự kiện</b> sẽ gộp các tín hiệu liên quan trước khi kích hoạt hành động, giúp tránh phản ứng nhầm với một cảnh báo đơn lẻ. Mỗi quy trình trở nên lặp lại được thay vì xử lý tay từng sự kiện.</p></div></div>
 
-<div class="split r"><div class="im"><img src="images/actions.png" alt="Hành động phản ứng tự động" loading="lazy"></div>
+<div class="rv split r"><div class="im"><img src="images/actions.png" alt="Hành động phản ứng tự động" loading="lazy"></div>
 <div><h4>Hành động trên hạ tầng và máy tính được hỗ trợ</h4>
 <p>Khi điều kiện Playbook thỏa mãn, DraySOAR có thể thông báo hoặc ngăn chặn qua thiết bị mạng và máy tính được hỗ trợ:</p>
-<div class="grid g2" style="margin-top:10px">
+<div class="rv grid g2" style="margin-top:10px">
 <div class="card"><h4>Notify</h4><p>Gửi e-mail, thông báo cho quản trị viên</p></div>
 <div class="card"><h4>Block</h4><p>Chặn IP bên ngoài, chặn lưu lượng đáng ngờ</p></div>
 <div class="card"><h4>Disable</h4><p>Tắt cổng switch, ngắt thiết bị có dây</p></div>
 <div class="card"><h4>Isolate</h4><p>Cô lập máy tính, hạn chế kết nối WAN/LAN của máy</p></div></div></div></div>
 
-<div class="split"><div class="im"><img src="images/simulation.png" alt="Mô phỏng tấn công" loading="lazy"></div>
+<div class="rv split"><div class="im"><img src="images/simulation.png" alt="Mô phỏng tấn công" loading="lazy"></div>
 <div><h4>Kiểm chứng phát hiện và phản ứng bằng kịch bản tấn công thực tế</h4>
 <p>Quy trình an ninh cần được <b>kiểm thử</b>, không chỉ cấu hình. DraySOAR được đánh giá bằng mô phỏng đối kháng và tấn công có kiểm soát.</p>
 <div class="tw"><table style="min-width:420px"><tr><th>Kịch bản</th><th>Môi trường</th></tr>
@@ -208,21 +213,21 @@ footer{background:#111b33;color:#aab4cc;font-size:14px;padding:28px 0;text-align
 
 <h3 class="t" style="font-size:26px;margin-top:46px">1. Phản ứng phối hợp trên toàn mạng</h3>
 <p class="lead">Tùy sự kiện và Playbook, DraySOAR áp dụng hành động ở những điểm khác nhau của hệ sinh thái:</p>
-<div class="grid g4">
+<div class="rv grid g4">
 <div class="card mini"><img src="images/resp-gateway.png" alt="Gateway" loading="lazy"><h4>Gateway</h4><p>Chặn mối đe dọa: chặn lưu lượng từ IP bên ngoài đáng ngờ</p></div>
 <div class="card mini"><img src="images/resp-switch.png" alt="Switch" loading="lazy"><h4>Switch</h4><p>Cô lập mạng có dây: tắt cổng switch</p></div>
 <div class="card mini"><img src="images/resp-ap.png" alt="Access Point" loading="lazy"><h4>AP</h4><p>Cô lập Wi-Fi: kiểm soát thiết bị không dây đáng ngờ</p></div>
 <div class="card mini"><img src="images/resp-endpoint.png" alt="Máy tính" loading="lazy"><h4>Endpoint</h4><p>Cô lập máy tính khỏi kết nối WAN và LAN</p></div></div>
 <p class="note">* Việc cô lập Wi-Fi dựa trên rủi ro an ninh phát hiện được, không phụ thuộc loại SSID, kể cả thiết bị kết nối qua SSID khách (Guest).</p>
 
-<div class="split" style="margin-top:46px"><div class="im"><img src="images/tr069.png" alt="TR-069 và VigorConnect" loading="lazy"></div>
+<div class="rv split" style="margin-top:46px"><div class="im"><img src="images/tr069.png" alt="TR-069 và VigorConnect" loading="lazy"></div>
 <div><h4>2. Tích hợp TR-069 &amp; VigorConnect: nối quyết định an ninh với hành động trên mạng</h4>
 <ul class="tick"><li><b>TR-069</b>: kênh giao tiếp giữa DraySOAR và thiết bị mạng được hỗ trợ, để chuyển lệnh an ninh đến thiết bị được quản lý</li>
 <li><b>VigorConnect</b>: mở rộng tích hợp sang VigorSwitch và VigorAP, phối hợp phản ứng trên cả mạng có dây và không dây</li>
 <li><b>DrayEDR</b>: nhìn thấy và cô lập máy tính</li></ul>
 <p class="note">* Thiết bị và khả năng phản ứng được hỗ trợ tùy theo model và phiên bản firmware.</p></div></div>
 
-<div class="grid g2" style="margin-top:36px">
+<div class="rv grid g2" style="margin-top:36px">
 <div class="card"><span class="n">3</span><h4>Định danh máy tính, không chỉ dựa vào địa chỉ MAC</h4><p>Địa chỉ MAC không phải lúc nào cũng nhất quán, nhất là khi thiết bị dùng MAC ngẫu nhiên. DraySOAR nhận diện máy được quản lý qua tác tử DrayEDR, kèm thông tin IP/MAC, nên vẫn theo dõi được máy khi địa chỉ mạng thay đổi.</p></div>
 <div class="card"><span class="n">4</span><h4>Phản ứng an ninh khép kín</h4><p>Tình báo an ninh → Phân tích &amp; điều tra → Playbook → Hành động phản ứng → Cô lập mạng/máy tính. Hành động có thể áp dụng ở gateway, mạng có dây, mạng không dây hoặc máy tính, tùy sự kiện và Playbook đã cấu hình.</p></div></div>
 </div></section>
@@ -235,18 +240,18 @@ footer{background:#111b33;color:#aab4cc;font-size:14px;padding:28px 0;text-align
 
 <h3 class="t" style="font-size:26px;margin-top:46px">1. Quản lý an ninh tập trung</h3>
 <p class="lead">Một chỗ để theo dõi, cấu hình, quản lý máy tính và quản trị hệ thống, không cần mở từng công cụ riêng.</p>
-<div class="grid g4">
+<div class="rv grid g4">
 <div class="card"><h4>Dashboard</h4><p>Tình trạng an ninh, tình trạng hệ thống</p></div>
 <div class="card"><h4>Giám sát</h4><p>Kiểm kê máy tính, phát hiện mã độc, sự kiện an ninh, lỗ hổng phần mềm, nhật ký hệ thống</p></div>
 <div class="card"><h4>Cấu hình</h4><p>Quản lý máy tính, nhóm máy, Playbook, hành động phản ứng, Task Scheduler, Allowlist, IP Reputation</p></div>
 <div class="card"><h4>Quản trị</h4><p>Tài khoản, vai trò, phân quyền, nhóm người dùng, thông báo</p></div></div>
 
-<div class="split" style="margin-top:46px"><div class="im"><img src="images/net-endpoint-ops.png" alt="Vận hành mạng và máy tính" loading="lazy"></div>
+<div class="rv split" style="margin-top:46px"><div class="im"><img src="images/net-endpoint-ops.png" alt="Vận hành mạng và máy tính" loading="lazy"></div>
 <div><h4>2. Vận hành mạng &amp; máy tính</h4>
 <ul class="tick"><li><b>Vận hành mạng:</b> TR-069 và VigorConnect tích hợp với thiết bị mạng DrayTek được hỗ trợ để quản lý và phản ứng an ninh</li>
 <li><b>Vận hành máy tính:</b> DrayEDR cho phép quan sát, quản lý và cô lập máy; Task Scheduler tự động hóa các tác vụ bảo mật và bảo trì định kỳ</li></ul></div></div>
 
-<div class="split r"><div class="im"><img src="images/vigor3912s.png" alt="Vigor3912S" loading="lazy"></div>
+<div class="rv split r"><div class="im"><img src="images/vigor3912s.png" alt="Vigor3912S" loading="lazy"></div>
 <div><h4>3. Triển khai trên Vigor3912S: kết hợp bảo vệ cổng mạng với vận hành an ninh tập trung</h4>
 <p><b>Vigor3912S</b> chạy DraySOAR ngay trên thiết bị, bên cạnh khả năng bảo vệ ở cấp cổng mạng. Tại gateway, thiết bị phát hiện và chặn mối đe dọa mạng theo thời gian thực. Suricata và Zeek chạy trên Vigor3912S gửi sự kiện an ninh về DraySOAR để giám sát, điều tra và liên kết sự kiện. Các Playbook đã cấu hình sẽ kích hoạt hành động khi đủ điều kiện.</p>
 <div class="tw"><table style="min-width:420px"><tr><th>Vigor3912S – Bảo vệ cổng mạng</th><th>DraySOAR – Vận hành an ninh</th></tr>
@@ -261,7 +266,7 @@ footer{background:#111b33;color:#aab4cc;font-size:14px;padding:28px 0;text-align
 <div class="eyebrow">Lợi ích cho doanh nghiệp</div>
 <h3 class="t">Giá trị từ vận hành an ninh được kết nối</h3>
 <p class="lead">DraySOAR đưa khả năng quan sát, điều tra, đánh giá rủi ro và phản ứng vào một quy trình liền mạch, giảm sự rời rạc trong vận hành an ninh để quản trị viên xử lý với ngữ cảnh tốt hơn.</p>
-<div class="grid g3">
+<div class="rv grid g3">
 <div class="card"><span class="n">1</span><h4>Nhìn thấy hợp nhất</h4><p>Gom thông tin mạng, máy tính, mã độc, lỗ hổng và sự kiện an ninh vào một nơi</p></div>
 <div class="card"><span class="n">2</span><h4>Ưu tiên theo rủi ro</h4><p>Dùng tình báo lỗ hổng, KEV, EPSS và mức phơi nhiễm của máy để biết rủi ro nào cần chú ý trước</p></div>
 <div class="card"><span class="n">3</span><h4>Điều tra nhanh hơn</h4><p>Nối sự kiện an ninh với ngữ cảnh máy tính, mã độc và lỗ hổng</p></div>
@@ -275,7 +280,7 @@ footer{background:#111b33;color:#aab4cc;font-size:14px;padding:28px 0;text-align
 <div class="eyebrow">Ứng dụng phù hợp</div>
 <h3 class="t">Thiết kế cho nhiều môi trường IT khác nhau</h3>
 <p class="lead">DraySOAR dành cho các tổ chức cần giám sát, điều tra và phản ứng với hoạt động an ninh trên hạ tầng mạng và máy tính mà không phải quản lý riêng từng mảng.</p>
-<div class="grid g2">
+<div class="rv grid g2">
 <div class="card"><img src="images/smb-1.png" alt="Doanh nghiệp vừa và nhỏ" loading="lazy" style="border-radius:10px;margin-bottom:12px"><h4>Doanh nghiệp vừa &amp; nhỏ (SMB)</h4><p>Tập trung giám sát, điều tra và phản ứng an ninh dù nguồn lực IT hạn chế.</p><details><summary>Xem sơ đồ minh họa</summary><img src="images/smb-2.png" alt="SMB" loading="lazy"></details></div>
 <div class="card"><img src="images/multisite-1.png" alt="Tổ chức nhiều chi nhánh" loading="lazy" style="border-radius:10px;margin-bottom:12px"><h4>Tổ chức nhiều chi nhánh</h4><p>Duy trì khả năng quan sát an ninh và phối hợp phản ứng giữa các địa điểm phân tán.</p><details><summary>Xem sơ đồ minh họa</summary><img src="images/multisite-2.png" alt="Nhiều chi nhánh" loading="lazy"></details></div>
 <div class="card"><img src="images/msp-1.png" alt="Nhà cung cấp dịch vụ quản lý" loading="lazy" style="border-radius:10px;margin-bottom:12px"><h4>Nhà cung cấp dịch vụ quản lý (MSP)</h4><p>Xây dựng quy trình giám sát, điều tra và phản ứng theo Playbook có thể lặp lại cho nhiều khách hàng.</p><details><summary>Xem sơ đồ minh họa</summary><img src="images/msp-2.png" alt="MSP" loading="lazy"></details></div>
@@ -301,10 +306,11 @@ footer{background:#111b33;color:#aab4cc;font-size:14px;padding:28px 0;text-align
 
 <section class="cta" id="lien-he"><div class="w">
 <h3>Sẵn sàng biến cảnh báo thành hành động?</h3>
-<p style="max-width:680px;margin:0 auto 22px;opacity:.92">Liên hệ An Phát Technology, nhà phân phối chính thức DrayTek tại Việt Nam, để được tư vấn giải pháp DraySOAR phù hợp với hạ tầng của bạn.</p>
+<p style="max-width:680px;margin:0 auto 22px;color:var(--mut)">Kể cho An Phát nghe hệ thống của bạn đang vướng ở đâu. Chúng tôi sẽ hiểu nhu cầu, chọn đúng thiết bị và kết nối thành một hệ thống phù hợp với bạn. Uy tín, chuyên nghiệp, hiện đại và gần gũi.</p>
 <a class="btn" href="https://anphat.vn" target="_blank" rel="noopener">Liên hệ tư vấn</a>
 </div></section>
 
-<footer><div class="w">Nội dung được dịch và biên soạn lại từ trang giải pháp DraySOAR của DrayTek Corp. Một số hình minh họa giữ nguyên nhãn tiếng Anh theo bản gốc. © DrayTek Corp. Phân phối chính thức tại Việt Nam: An Phát Technology.</div></footer>
+<footer><div class="w"><div class="ft"><img src="images/logo-anphat-ngang.svg" alt="An Phát Technology"><small>Nhà phân phối chính thức</small><span class="pill"><img src="images/logo-draytek.svg" alt="DrayTek"></span></div>Nội dung được dịch và biên soạn lại từ trang giải pháp DraySOAR của DrayTek Corp. Một số hình minh họa giữ nguyên nhãn tiếng Anh theo bản gốc. © DrayTek Corp. </div></footer>
+<script>try{var o=new IntersectionObserver(function(e){e.forEach(function(x){if(x.isIntersecting){x.target.classList.add("in");o.unobserve(x.target)}})},{threshold:.12});document.querySelectorAll(".rv").forEach(function(n){o.observe(n)})}catch(e){document.querySelectorAll(".rv").forEach(function(n){n.classList.add("in")})}</script>
 </body>
 </html>
